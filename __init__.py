@@ -1,0 +1,1 @@
+from .ringer_rankings import update_qb_ranks
