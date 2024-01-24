@@ -1,6 +1,6 @@
 import sys
-from .ringer_rankings import update_qb_ranks
+import ringer_rankings
 
 if sys.argv[1] == 'run':
-    update_qb_ranks()
+    ringer_rankings.update_qb_ranks()
     
