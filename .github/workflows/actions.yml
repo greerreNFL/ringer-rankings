@@ -4,6 +4,9 @@ on:
   schedule:
     - cron: 10 12 * SEP-DEC,JAN TUE,WED,THU
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
