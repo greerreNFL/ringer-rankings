@@ -1,8 +1,6 @@
-name: run workflow
+name: run now
 
-on:
-  schedule:
-    - cron: 10 12 * SEP-DEC,JAN TUE,WED,THU
+on: workflow_dispatch
 
 jobs:
   build:
