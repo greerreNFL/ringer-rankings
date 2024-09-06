@@ -67,7 +67,20 @@ def parse_p(p_str):
     '''
     parses the text from an html p
     '''
-    return p_str.split('<p>')[1].split('</p>')[0]
+    ## try different parsing strats ##
+    if p_str is None:
+        return numpy.nan
+    if p_str == '' or p_str == ' ':
+        return numpy.nan
+    if len(p_str) <= 5:
+        return numpy.nan
+    if '<p>' in p_str:
+        return p_str.split('<p>')[1].split('</p>')[0]
+    if '\u003cp\u003e' in p_str:
+        return p_str.split('\u003e')[1].split('\u003c')[0]
+    
+    ## fall back to none
+    return numpy.nan
 
 def parse_badges(badges):
     '''
